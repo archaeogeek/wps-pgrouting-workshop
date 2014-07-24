@@ -2,4 +2,6 @@
 
 Workshop Summary
 
-* [Introduction](Introduction/README.md)
+* [Overview](Introduction/README.md)
+    * [Installation](Introduction/installation.md)
+    * [Getting Started](Introduction/GettingStarted.md)
