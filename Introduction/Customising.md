@@ -3,10 +3,10 @@
 The basic information about your new ZOO WPS Service is stored in the file main.cfg, which lives in the same file as the ZOO kernel or cgi file. In this case, it's in /usr/lib/cgi-bin. Navigate to this location by double-clicking on the "file system" icon on the desktop to open the file manager. Find "main.cfg" and double-click it to open in a text editor.
 
 Before you can make changes to this file you will need to make it editable. In your terminal, type the following:
-    cd /usr/lib/cgi-bin
-    sudo chmod 777 main.cfg
+    cd /usr/lib
+    sudo chmod 777 -R cgi-bin
 Remember to give the sudo password if prompted.
-Note that this is not good practice as it opens up the config file to being edited by anyone but for the purposes of this demonstration it's OK.
+Note that this is not good practice as it opens up all the files within the cgi-bin folder to being edited by anyone but for the purposes of this demonstration it's OK.
 
 The main.cfg file contains some configuration information and metadata about the server as a whole, not the services that run on it. Typically it will look something similar to this:
 
