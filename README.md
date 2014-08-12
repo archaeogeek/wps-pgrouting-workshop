@@ -2,5 +2,5 @@
 
 Workshop generated with gitbook.
 
-See (http://archaeogeek.github.io/wps-pgrouting-workshop/)[here] for the generated documentation
+See [http://archaeogeek.github.io/wps-pgrouting-workshop/](here) for the generated documentation
 
