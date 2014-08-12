@@ -1,3 +1,4 @@
+
 # Overview
 
 While they may differ in how they look and how they are installed, WPS Servers are basically all the same. They are an application that runs on a web server (such as apache) and accepts http GET requests in the form of Key-Value-Pairs or http POST requests in xml format. The WPS server will respond with either LiteralData (such as a character string), ComplexData (such as a URL to a file that can be downloaded), or BoundingBoxData.
@@ -25,7 +26,4 @@ Installation and usage is more complex than for GeoServer as you are required to
  * ZOO-API- a javascript library based on OpenLayers and Proj4js, designed to make the it easier to create services.
 
 ZOO is the most complex package to install and configure, although the use of OSGeo4W for installation on windows makes it easier. There is a lot of good documentation and tutorials on the ZOO website.
-
-
-
 
