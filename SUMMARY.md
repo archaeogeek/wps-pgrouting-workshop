@@ -7,3 +7,4 @@ Workshop Summary
 * [Getting Started](GettingStarted/GettingStarted.md)
     * [Customising Your Server](GettingStarted/Customising.md)
     * [Hello World](GettingStarted/HelloWorld.md)
+* [Basic Geoprocessing](Geoprocessing/Introduction.md)
