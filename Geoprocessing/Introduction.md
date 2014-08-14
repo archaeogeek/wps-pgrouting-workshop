@@ -73,26 +73,7 @@ Line 6 uses the first helper function- extractInputs. However, this is merely a 
 
 These associated features are returned to the Buffer function in line 6, then the following lines iterate through each feature, clone it, buffer it, and return it to a dictionary called rgeometries. When each feature has been buffered, rgeometries is appended to the outputResult dictionary and the script returns the SERVICE_SUCCEEDED value.
 
-## Testing this out
-
-It's a bit more difficult to fully test this function in a browser, but we will use the DescribeProcess call to understand how it works. As before, type in a new browser tab:
-    http://localhost/cgi-bin/zoo_loader.cgi?Service=WPS&Version=1.0.0&Request=DescribeProcess&Identifier=Buffer
-
-We will use the QGIS WPS Plugin to Execute this process, to save trying to pass the nodes of a polygon via a URL!
-
-Go to the applications button in the top left of your screen and go to Education\QGIS (not QGIS browser or server). This will load QGIS 2.0, which is a little out of date but the same process should hold for later versions. Chances are, the WPS plugin is not yet installed, so click on Plugins on the top menu, and then "Manage and Install Plugins". Select "Get more from the list on the left, then in the Search bar, type WPS. In the results window you should see "WPS Client". Select it, then click on "Install plugin". Hopefully you will receive a message that the plugin installed successfully, then click on "Close" in the bottom right to close the plugin manager.
-
-If you do not already see a WPS section in the bottom-left of QGIS, under the main Layers browser window, click on "Web" and then "WPS Client" in the top toolbar.
-
-Click on "connect" in the WPS section, and then the "New" button to add a new WPS server. In the Name box, give your server a memorable name, such as ZOO OSGIS Demo. In the URL box type the path to the zoo_loader.cgi:
-    http://localhost/cgi-bin/zoo_loader.cgi
-Click OK to make this dialogue box disappear, and then with your new connection visible in the Server Connections box, click "Connect" to connect to the server.
-
-If the URL was correct, you should now see a long list of processes or Identifiers, with their Title and Abstract. If the list of Identifiers is not in alphabetical order, click the column title to sort it to your liking.
-
-From the list, find the Buffer service, and either highlight it and click "OK", or double-click it. This will bring up a simple form with the Input Vales in it, but we have got a bit ahead of ourselves because we haven't provided any input geometries yet! Click "back" to close the process dialogue box, and then "close" to exit from the WPS plugin.
-
-The OSGeo Live DVD contains plenty of spatial data for us to use as an example. 
+ 
 
 
 

@@ -1,12 +1,4 @@
 
-# Overview
-
-This workshop will try and provide you with an outline into what WPS Servers are, a brief overview of the three main open source packages, and their pros and cons.
-
-We will try and build a simple "Hello World" service, and then explore a Polygon Buffer Service and a Shortest Path Routing service with PgRouting. 
-
-Finally, we will explore different methods of connecting to the WPS server- via the QGIS WPS Plugin and through a simple web-based map.
-
 ## Introduction to WPS
 
 While they may differ in how they look and how they are installed, WPS Servers are basically all the same. They are an application that runs on a web server (such as apache) and accepts http GET requests in the form of Key-Value-Pairs or http POST requests in xml format. The WPS server will respond with either LiteralData (such as a character string), ComplexData (such as a URL to a file that can be downloaded), or BoundingBoxData.

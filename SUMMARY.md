@@ -9,3 +9,4 @@ Workshop Summary
     * [Customising Your Server](GettingStarted/Customising.md)
     * [Hello World](GettingStarted/HelloWorld.md)
 * [Basic Geoprocessing](Geoprocessing/Introduction.md)
+    * [Testing with QGIS](Geoprocessing/Testing.md)
