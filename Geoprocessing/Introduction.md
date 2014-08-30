@@ -17,11 +17,12 @@ The DataInputs section has two parameters:
 
 The InputPolygon parameter has minOccurs =1 , so is mandatory. It has a ComplexData data type, with three supported types, namely 2 types of GML and JSON. UTF-8 encoded GML is the default type.
 
-The BufferDistance parameter has minOccurs = 0, so is optional. In the case where the BufferDistance parameter is not provided, there is a default 10 metres (note the US spelling). It has  LiteralData data type, with a type float, which means that it will accept numbers with decimal places. Although the default Unit of Measurement (uom)is meters, it will also accept feet.
+The BufferDistance parameter has minOccurs = 0, so is optional. In the case where the BufferDistance parameter is not provided, there is a default 10 metres (note the US spelling). It has  LiteralData data type, with a type float, which means that it will accept numbers with decimal places. Although the default Unit of Measurement (uom) is meters, it will also accept feet.
 
 The DataOutputs section uses the same ComplexData definitions to describe the format of the output buffer polygon.
 
 You'll also notice a different type of supported output data:
+
     <Supported>
      mimeType = image/png
      asReference = true

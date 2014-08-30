@@ -3,8 +3,10 @@
 The basic information about your new ZOO WPS Service is stored in the file main.cfg, which lives in the same file as the ZOO kernel or cgi file. In this case, it's in /usr/lib/cgi-bin. Navigate to this location by double-clicking on the "file system" icon on the desktop to open the file manager. Find "main.cfg" and double-click it to open in a text editor.
 
 Before you can make changes to this file you will need to make it editable. In your terminal, type the following:
+
     cd /usr/lib/cgi-bin
     sudo chmod 777 main.cfg
+
 Remember to give the sudo password if prompted.
 Note that this is not good practice as it opens up the config file to being edited by anyone but for the purposes of this demonstration it's OK.
 
@@ -69,7 +71,10 @@ Once you have completed main.cfg to your satisfaction and you have mde sure you 
 Move your mouse to the bottom of the window and find the web browser icon (second from the left). Click on this to open firefox.
 
 In the URL window type the following:
+
      http://localhost/cgi-bin/zoo_loader.cgi?Request=GetCapabilities&Service=WPS
-If you have typed this correctly and have no mistakes in your main.cfg file you should see an xml document containing the GetCapabilities response from the server.
+
+If you have typed this correctly and have no mistakes in your main.cfg file you should see an xml document containing the GetCapabilities response from the server:
+![GetCapabilities](../images/getcapabilities.png)
 
 If you scroll down through this response you will see a number of processes available, which are pre-defined as part of the ZOO demo that you downloaded.
