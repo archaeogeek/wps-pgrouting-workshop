@@ -50,7 +50,7 @@ The do.zcfg file references service.py in the routing folder, so using medit, op
 The scripting for this part is quite complex, and service.py contains a large number of functions that we won't be covering in this workshop.
 
 Firstly, switch on line numbers in medit by clicking "View/Show Line Numbers":
-![Show Line Numbers](/images/show_linenumbers.png)
+![Show Line Numbers](./images/show_linenumbers.png)
 
 Lines 2 to 6 show the additional modules that are needed for running the routing script- the important new one here is psycopg2, which allows python to connect to a postgreSQL database and execute SQL statements.
 
