@@ -3,7 +3,7 @@
 Workshop Summary
 
 * [Overview](Introduction/Overview.md)
-    * [Package Summary](Introduction/README.md)
+    * [Package Summary](Introduction/Summary.md)
     * [Installation](Introduction/installation.md)
 * [Getting Started](GettingStarted/GettingStarted.md)
     * [Customising Your Server](GettingStarted/Customising.md)
