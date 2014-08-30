@@ -37,7 +37,7 @@ If you expand "ways\columns", you'll see the following:
  Right-click the "ways" table name, and choose "View Data/View Top 100 Rows" to get a sample of what this looks like. Again, click "OK" to dismiss the warning about editing data without a primary key. In particular, notice how rows with identical osm_ids, in other words edges that originally form part of the same road, have source and target nodes that link together.
 
  Having explored the structure of the data, we can now run a shortest path query directly in pgadmin3 using the SQL window. Close any open tables but leave PgAdmin3 open. Click on the SQL button in the toolbar:
- ![SQL](./images//sql_button.png)
+ ![SQL](../images//sql_button.png)
  This opens a SQL Editor window where we can write queries. Copy the following into the SQL editor window:
     select pgr_dijkstra('select gid as id, source, target, length/maxspeed_forward as cost, length/maxspeed_backwards as reverse_cost from ways', 1, 9, true, true);
 If we recall from the introduction to pgRouting functions, pgr_dijkstra requires 5 parameters. 
@@ -47,7 +47,7 @@ If we recall from the introduction to pgRouting functions, pgr_dijkstra requires
  * Since we have chosen to take the direction of travel into account, we have set "directed" = true and "has_rcost" = true.
 
 Click the green "execute query" button to run the query:
-![Execute query](./images/execute_query.png)
+![Execute query](../images/execute_query.png)
 
 Depending on the source and targets nodes that you selected, this query should return a set of rows, describing each step on the journey. The final row will always have an edge id (id2) of -1.
 
