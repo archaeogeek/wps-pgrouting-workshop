@@ -16,26 +16,26 @@ In the file manager, navigate to the /usr/lib/cgi-bin directory and open the fil
      statusSupported = true
      serviceProvider = hello_service
      serviceType = Python
-     &lt;DataInputs&gt;
+     <DataInputs/>
       [name]
        Title = Input string
        Abstract = The name to insert in the hello message.
        minOccurs = 1
        maxOccurs = 1
-       &lt;LiteralData&gt;
+       <LiteralData>
            dataType = string
-           &lt;Default /&gt;
-       &lt;/LiteralData&gt;
-     &lt;/DataInputs&gt;
-     &lt;DataOutputs&gt;
+           <Default />
+       </LiteralData>
+     </DataInputs/>
+     <DataOutputs>
       [Result]
        Title = The resulting string
        Abstract = The hello message containing the input name
-       &lt;LiteralData&gt;
+      <LiteralData>
            dataType = string
-           &lt;Default /&gt;
-       &lt;/LiteralData&gt;
-     &lt;/DataOutputs&gt;
+          <Default />
+       </LiteralData>
+     </DataOutputs>
 
 The first 8 lines contain metadata about the service. These include the following:
 
@@ -67,6 +67,7 @@ ZOO services files in python contain functions corresponding to each of the serv
 Each service function must return an integer value representing the execution status of the service, as defined in the [ZOO API](http://zoo-project.org/docs/api/zoo.html).
 
 Each service takes exactly three arguments, and these are in the form of python dictionaries, which are a type of Key Value Pair:
+
 * conf: the main environment configuration (eg the information from main.cfg)
 * inputs: the requested or default inputs
 * outputs: the requested or default outputs

@@ -3,13 +3,16 @@
 The WPS plugin doesn't seem to like the input and output format of the do service, so we'll go straight to seeing how this might work in a web-based map.
 
 The ZOO Demo provides a really fully-featured example of this. Click on "Applications/Web Browser" to open firefox if it's not already open, and browse to http://localhost/zoo-ws2013:
-![Routing Demo](/images/routing_demo.png)
+
+![Routing Demo](../images/routing_demo.png)
 
 Firstly we're going to enable firebug in firefox so that we can see what requests are being made back to our routing service. If the firebug icon in the top right of the firefox window is not active (ie it's grey) then click it to activate it. This should bring up a window at the bottom of the browser:
-![Firebug Net Panel](/images/firebug_netpanel.png)
+
+![Firebug Net Panel](../images/firebug_netpanel.png)
 
 If "Net" is disabled, as it is in the screenshot above, click "enable" to make it active and ensure that the "All" tab is selected:
-![Net Panel Active](/images/netpanel_active.png)
+
+![Net Panel Active](../images/netpanel_active.png)
 
 Then, reload the main page and watch the requests scroll by!
 
@@ -20,28 +23,34 @@ Select the red flag and click on the map to place it where you'd like to end you
 This web application not only computes the shortest path route, but gives turn-by-turn directions, and computes the elevation.
 
 In firebug, find the request that starts with "GET zoo_loader" and hover over it with your mouse to see the full request. Right-click the request and choose "Open in new tab". This is the "Execute" request to the WPS server, and when broken down it looks a lot like the ones we built earlier (with a few extra parameters):
-![Execute do process](/images/execute_do.png)
+
+![Execute do process](../images/execute_do.png)
 
 Looking at the results of this in our browser tab we can see the ProcessOutputs:
-![do response](/images/do_response.png)
+
+![do response](../images/do_response.png)
+
 Since we told WPS to use Mapserver, the response is a request to a temporary mapserver map file that we can potentially view in a browser. To do this, copy the reference href and paste it into a new browser tab. Unedited, it will not display as it is not in an image format, so change the format string from application/json to image/png to view the result:
-![mapserver result](/images/mapserver_result.png)
+
+![mapserver result](../images/mapserver_result.png)
 
 ## JavaScript
 
 In order to send inputs to our routing process, we need to use JavaScript. 
 
 The basic process for this is as follows:
-    - Build the map (for example using OpenLayers) showing the base mapping that you want, and any overlays.
-    - Add controls for establishing the start and end points of the route, for zooming in and out, resetting the page and so on.
-    - Add a vector layer for holding the points that represent the start and end of the route.
-    - Construct a URL that sends the Execute request off to the WPS service with the appropriate parameters.
-    - Add a further layer to hold the json response from the WPS service.
+
+1. Build the map (for example using OpenLayers) showing the base mapping that you want, and any overlays.
+2. Add controls for establishing the start and end points of the route, for zooming in and out, resetting the page and so on.
+3. Add a vector layer for holding the points that represent the start and end of the route.
+4. Construct a URL that sends the Execute request off to the WPS service with the appropriate parameters.
+5. Add a further layer to hold the json response from the WPS service.
 
 While the demo page that we have been using is rather more complicated than that, if we view the source of it we can see these steps in action.
 
 Right-click the web page and choose "View Page Source":
-![View Page Source](/images/view_source.png)
+
+![View Page Source](../images/view_source.png)
 
 Amongst the scripts referenced at the top of the page are "spatialtools_files\demo.js" and "WPS.js".
 

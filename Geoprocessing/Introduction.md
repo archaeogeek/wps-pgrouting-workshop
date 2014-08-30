@@ -9,9 +9,11 @@ The ZOO demo comes with a large number of services pre-built. We will look at th
 Navigate to /usr/lib/cgi-bin and right click the file buffer.zcfg to open it in a text editor.
 
 The top section of this file is the metadata section, as it was with the Hello World service. In this section you will spot a new parameter:
+
 * Profile: This is an optional unique identifier for the process, from the OGC URN namespace [see here for an in depth description](http://www.opengeospatial.org/ogcna)
 
 The DataInputs section has two parameters:
+
 * InputPolygon: The polygon you wish to buffer
 * BufferDistance: The width of the buffer that you wish to create
 
@@ -53,7 +55,7 @@ This particular service provider file contains a number of helper functions defi
         geometry=extractInputs(conf,inputs["InputPolygon"])
         i=0
         rgeometries=[]
-        while i < len(geometry):
+        while i &lt; len(geometry):
             tmp=geometry[i].Clone()
             resg=geometry[i].GetGeometryRef().Buffer(bdist)
             tmp.SetGeometryDirectly(resg)

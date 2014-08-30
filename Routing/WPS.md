@@ -5,15 +5,19 @@
 To implement our routing functions as WPS services, we'll need to decide on which functions we're going to make available, and decide on the number of parameters that they require.
 
 It's probably not necessary to give the end-users of a WPS the choice of several different shortest path calculations, and neither is it wise to require them to fill in the name of the various tables and columns needed for the query. As the holders of the routing data we can also decide whether to use direction (aka reverse_cost) in our query. This simplifies the number of inputs, from:
-    * function name
-    * sql
-    * source
-    * target
-    * directed
-    * has_rcost
+
+* function name
+* sql
+* source
+* target
+* directed
+* has_rcost
+
 to:
-    * source
-    * target
+
+* source
+* target
+
 The rest of the parameters will be filled in within our python module, along with the database connection information.
 
 ## Building the config
@@ -23,6 +27,7 @@ The python coding for this is going to get quite complex (we'll look through it 
 On the desktop, click on "File System" and navigate to "usr\lib\cgi-bin\routing". There are a number of service config files in here, but we'll concentrate on do.zcfg. Right-click to open this in medit. 
 
 This config file has the same three sections that we've seen previously:
+
  * metadata: describing the service
  * DataInputs: descring the inputs
  * DataOutputs: describing the outputs
@@ -34,6 +39,7 @@ Since the service requires exactly two inputs- the starting node (source) and en
 ### DataOutputs
 
 The key thing to note about the output is the format of the output data:
+
     <Default>
         mimeType = application/json
         asReference = true
@@ -41,6 +47,7 @@ The key thing to note about the output is the format of the output data:
         useMapserver = true
         extension = json
     </Default>
+
 This is a directive to allow ZOO to output in mapserver format, with a style as defined in the msStyle parameter.
 
 ## The Python script
@@ -59,8 +66,10 @@ Line 18 shows the database connection function, and the connection string for th
 Scroll down to the "do" module at line 298.
 
 This functions takes the same parameters as our "hello world" function, and like the buffer function, it references a number of helper functions earlier in the script:
+
  * findNearestEdge (line 159) computes the nearest edge to start and finish coordinates, and passes them to...
  * computeRoute (line 168), which connects to the database and chooses between a number of different variations on the shortest path functions, depending on additional parameters past. Line 180, for example, shows a SQL query to run the pgr_dijkstra function, in a similar way to the one we ran earlier. You will see that they use the length of the edge as the cost rather than length/maxspeed.
+
 The rest of the computeRoute function (lines 187 to 275) are designed to create a temporary table in the database holding the results of the journey calculation, along with elevation and descriptive information about each step in the route, all in such a way that it can be converted into feature collections (remember our buffer function did something similar) for output as json. Finally this is returned to the do function in a format suitable for display on the map.
 
 Finally the do function closes it's connection to the database and returns 3, which is the shortcut for the SERVICE_SUCCEEDED response that the WPS service needs. Phew!

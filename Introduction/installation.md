@@ -17,7 +17,9 @@ Although the folder paths may change, regardless of which installation method yo
 PyWPS is under development and the only way to install it is from the [GitHub Repository](https://github.com/jachym/pywps-4) using pip, the tool for installing and managing python packages. So before you get started with PyWPS you will need to ensure you have Python 2.7 or newer installed, and Pip, which you can find instructions for [here](https://pip.pypa.io/en/latest/).
 
 The [documentation](http://pywps.readthedocs.org/en/latest/) for PyWPS suggests that it can be installed along with all of its dependencies with the following command:
-&lt;pre&gt;&lt;code&gt;$ pip install -e git+https://github.com/jachym/pywps-4.git@master#egg=pywps-dev&lt;/code&gt;&lt;/pre&gt;
+
+    $ pip install -e git+https://github.com/jachym/pywps-4.git@master#egg=pywps-dev
+
 If this fails, then the dependencies (lxml and werkzeug) can also be installed using pip, then re-run the above command.
 
 ## ZOO
