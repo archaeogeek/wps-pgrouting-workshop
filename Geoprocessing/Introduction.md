@@ -10,12 +10,12 @@ Navigate to /usr/lib/cgi-bin and right click the file buffer.zcfg to open it in 
 
 The top section of this file is the metadata section, as it was with the Hello World service. In this section you will spot a new parameter:
 
-* Profile: This is an optional unique identifier for the process, from the OGC URN namespace [see here for an in depth description](http://www.opengeospatial.org/ogcna)
+* **Profile**: This is an optional unique identifier for the process, from the OGC URN namespace [see here for an in depth description](http://www.opengeospatial.org/ogcna)
 
 The DataInputs section has two parameters:
 
-* InputPolygon: The polygon you wish to buffer
-* BufferDistance: The width of the buffer that you wish to create
+* **InputPolygon**: The polygon you wish to buffer;
+* **BufferDistance**: The width of the buffer that you wish to create.
 
 The InputPolygon parameter has minOccurs =1 , so is mandatory. It has a ComplexData data type, with three supported types, namely 2 types of GML and JSON. UTF-8 encoded GML is the default type.
 
@@ -32,10 +32,10 @@ You'll also notice a different type of supported output data:
      useMapServer = true
     </Supported>
 
-* mimeType = image/png: allow the saving of the output as an image
-* asReference: (true/false) allow the output to be saved on the server
-* msStyle: a style definition in MapServer format for the output polygon
-* useMapServer: (true/false) instructs the ZOO kernel to make the output available in MapServer wms/wfs format for use in a web mapping application
+* **mimeType = image/png**: allow the saving of the output as an image;
+* **asReference**: (true/false) allow the output to be saved on the server;
+* **msStyle**: a style definition in MapServer format for the output polygon;
+* **useMapServer**: (true/false) instructs the ZOO kernel to make the output available in MapServer wms/wfs format for use in a web mapping application.
 
 ## The Service Provider file
 

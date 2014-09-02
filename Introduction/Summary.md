@@ -4,9 +4,9 @@ The three WPS packages are listed below.
 
 ## Geoserver
 
-![Geoserver Logo](../images/geoserver.png)
+![Geoserver Logo](../images/Geoserver.png)
 
-[Geoserver](http://geoserver.org) is a fully featured Web Mapping Server, and WPS integration is available as an addition. It has the advantage of being easier to install and comes pre-configured with a number of WPS processes, but it is not possible to create your own processes.
+[Geoserver](http://Geoserver.org) is a fully featured Web Mapping Server, and WPS integration is available as an addition. It has the advantage of being easier to install and comes pre-configured with a number of WPS processes, but it is not possible to create your own processes.
 
 ## PyWPS
 
@@ -14,7 +14,7 @@ The three WPS packages are listed below.
 
 [PyWPS](http://pywps.wald.intevation.org/) is a small python-based WPS that was originally developed to provide access to modules from GRASS GIS, but now it offers an environment for programming your own processes.
 
-Installation and usage is more complex than for GeoServer as you are required to write your own processes, but it is under active development and has good documentation. It is probably best suited for those with an intermediate or higher level of experience writing python code.
+Installation and usage is more complex than for Geoserver as you are required to write your own processes, but it is under active development and has good documentation. It is probably best suited for those with an intermediate or higher level of experience writing python code.
 
 ## ZOO
 

@@ -6,17 +6,17 @@ To implement our routing functions as WPS services, we'll need to decide on whic
 
 It's probably not necessary to give the end-users of a WPS the choice of several different shortest path calculations, and neither is it wise to require them to fill in the name of the various tables and columns needed for the query. As the holders of the routing data we can also decide whether to use direction (aka reverse_cost) in our query. This simplifies the number of inputs, from:
 
-* function name
-* sql
-* source
-* target
-* directed
-* has_rcost
+* **function name**;
+* **sql**;
+* **source**;
+* **target**;
+* **directed**;
+* **has_rcost**.
 
 to:
 
-* source
-* target
+* **source**;
+* **target**
 
 The rest of the parameters will be filled in within our python module, along with the database connection information.
 
@@ -28,9 +28,9 @@ On the desktop, click on "File System" and navigate to "usr\lib\cgi-bin\routing"
 
 This config file has the same three sections that we've seen previously:
 
- * metadata: describing the service
- * DataInputs: descring the inputs
- * DataOutputs: describing the outputs
+ * **metadata**: describing the service;
+ * **DataInputs**: descring the inputs;
+ * **DataOutputs**: describing the outputs.
 
 ### DataInputs
 
@@ -67,8 +67,8 @@ Scroll down to the "do" module at line 298.
 
 This functions takes the same parameters as our "hello world" function, and like the buffer function, it references a number of helper functions earlier in the script:
 
- * findNearestEdge (line 159) computes the nearest edge to start and finish coordinates, and passes them to...
- * computeRoute (line 168), which connects to the database and chooses between a number of different variations on the shortest path functions, depending on additional parameters past. Line 180, for example, shows a SQL query to run the pgr_dijkstra function, in a similar way to the one we ran earlier. You will see that they use the length of the edge as the cost rather than length/maxspeed.
+ * **findNearestEdge** (line 159) computes the nearest edge to start and finish coordinates, and passes them to...
+ * **computeRoute** (line 168), which connects to the database and chooses between a number of different variations on the shortest path functions, depending on additional parameters past. Line 180, for example, shows a SQL query to run the pgr_dijkstra function, in a similar way to the one we ran earlier. You will see that they use the length of the edge as the cost rather than length/maxspeed.
 
 The rest of the computeRoute function (lines 187 to 275) are designed to create a temporary table in the database holding the results of the journey calculation, along with elevation and descriptive information about each step in the route, all in such a way that it can be converted into feature collections (remember our buffer function did something similar) for output as json. Finally this is returned to the do function in a format suitable for display on the map.
 

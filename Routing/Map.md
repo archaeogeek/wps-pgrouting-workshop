@@ -37,7 +37,11 @@ Looking at the results of this in our browser tab we can see the ProcessOutputs:
 
 ![do response](../images/do_response.png)
 
-Since we told WPS to use Mapserver, the response is a request to a temporary mapserver map file that we can potentially view in a browser. To do this, copy the reference href and paste it into a new browser tab. Unedited, it will not display as it is not in an image format, so change the format string from application/json to image/png to view the result:
+Since we told WPS to use Mapserver, the response is a request to a temporary mapserver map file that we can potentially view in a browser. To do this, copy the reference href. It will look something like this:
+
+![Mapserv response](../images/mapserv_href.png)
+
+Paste your response into a new browser tab. Unedited, it will not display as it is not in an image format, so change the format string in the URL from **application/json** to **image/png** to view the result:
 
 ![mapserver result](../images/mapserver_result.png)
 
@@ -47,10 +51,10 @@ In order to send inputs to our routing process, we need to use JavaScript.
 
 The basic process for this is as follows:
 
-1. Build the map (for example using OpenLayers) showing the base mapping that you want, and any overlays.
-2. Add controls for establishing the start and end points of the route, for zooming in and out, resetting the page and so on.
-3. Add a vector layer for holding the points that represent the start and end of the route.
-4. Construct a URL that sends the Execute request off to the WPS service with the appropriate parameters.
+1. Build the map (for example using OpenLayers) showing the base mapping that you want, and any overlays;
+2. Add controls for establishing the start and end points of the route, for zooming in and out, resetting the page and so on;
+3. Add a vector layer for holding the points that represent the start and end of the route;
+4. Construct a URL that sends the Execute request off to the WPS service with the appropriate parameters;
 5. Add a further layer to hold the json response from the WPS service.
 
 While the demo page that we have been using is rather more complicated than that, if we view the source of it we can see these steps in action.
@@ -61,8 +65,8 @@ Right-click the web page and choose "View Page Source":
 
 Amongst the scripts referenced at the top of the page are "spatialtools_files\demo.js" and "WPS.js".
 
- * demo.js is the file that actually builds the openlayers map, creates the controls, gathers the inputs for the various routing services available, and displays the output.
- * wps.js contains a number of helper functions for working with the WPS server.
+ * **demo.js** is the file that actually builds the openlayers map, creates the controls, gathers the inputs for the various routing services available, and displays the output;
+ * **wps.js** contains a number of helper functions for working with the WPS server.
 
 If we click on the link to "spatialtools_files\demo.js" (line 18) then we can explore the process of gathering the inputs for the do service.
 

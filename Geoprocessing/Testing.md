@@ -48,10 +48,10 @@ If the URL was correct, you should now see a long list of processes or Identifie
 
 From the list, find the Buffer service, and either highlight it and click "OK", or double-click it. This will bring up a simple form with the Input Vales in it. Enter the following options:
 
-* Input Polygon: this is a dropdown list of available layers- choose world_merc
-* Buffer Distance: the width of your buffer. The default value that you set in the config should already be loaded here but you will need to set it to around 10000 to see a visible result for the world_merc shapefile. 
-* Selected: tick this box to buffer only the feature(s) that you have selected
-* Result: this shows the output- leave this as the default
+* **Input Polygon**: this is a dropdown list of available layers- choose world_merc;
+* **Buffer Distance**: the width of your buffer. The default value that you set in the config should already be loaded here but you will need to set it to around 10000 to see a visible result for the world_merc shapefile; 
+* **Selected**: tick this box to buffer only the feature(s) that you have selected;
+* **Result**: this shows the output- leave this as the default.
 
 ![Buffer Process](../images/buffer_process.png)
 

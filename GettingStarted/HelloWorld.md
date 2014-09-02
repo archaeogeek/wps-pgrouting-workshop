@@ -39,22 +39,22 @@ In the file manager, navigate to the /usr/lib/cgi-bin directory and right-click 
 
 The first 8 lines contain metadata about the service. These include the following:
 
-* processVersion: A user-defined version number for the service
-* storeSupported: Should ZOO be able to store the results of the service? (True/False)
-* statusSupported: Should ZOO be able to run the service as a background task? (True/False)
-* serviceProvider: The name of the file containing the code for the service
-* serviceType:  The programming language used
+* **processVersion**: A user-defined version number for the service
+* **storeSupported**: Should ZOO be able to store the results of the service? (True/False)
+* **statusSupported**: Should ZOO be able to run the service as a background task? (True/False)
+* **serviceProvider**: The name of the file containing the code for the service
+* **serviceType**:  The programming language used
 
 This section can also contain a &lt;MetaData&gt; section if you like, containing additional information about the service.
 
 Below the metadata section are the DataInputs and DataOutputs sections. The DataInputs block contains the following:
 
-* [name]: The name of the input- this is how it will be referred to in the service code
-* Title/Abstract: Metadata about the input, for use in the DescribeProcess response
-* minOccurs/maxOccurs: Mandatory- the number of times the input will occur
-* &lt;LiteralData&gt;: The type of data node for the input. Remember from the introduction that the data type can either be LiteralData, BoundingBoxData or ComplexData.
-* dataType: The type of data for the given node.
-* &lt;Default /&gt;: Mandatory section, but not used for LiteralData types.
+* **[name]**: The name of the input- this is how it will be referred to in the service code
+* **Title/Abstract**: Metadata about the input, for use in the DescribeProcess response
+* **minOccurs/maxOccurs**: Mandatory- the number of times the input will occur
+* **&lt;LiteralData&gt;**: The type of data node for the input. Remember from the introduction that the data type can either be LiteralData, BoundingBoxData or ComplexData.
+* **dataType**: The type of data for the given node.
+* **&lt;Default /&gt;**: Mandatory section, but not used for LiteralData types.
 
 The DataOutputs block contains very similar sections, but instead of describing the input, it's describing the output response. Therefore it doesn't need to contain the minOccurs/maxOccurs sections.
 
@@ -68,9 +68,9 @@ Each service function must return an integer value representing the execution st
 
 Each service takes exactly three arguments, and these are in the form of python dictionaries, which are a type of Key Value Pair:
 
-* conf: the main environment configuration (eg the information from main.cfg)
-* inputs: the requested or default inputs
-* outputs: the requested or default outputs
+* **conf**: the main environment configuration (eg the information from main.cfg)
+* **inputs**: the requested or default inputs
+* **outputs**: the requested or default outputs
 
 If you open hello_service.py in a text editor you will see the following:
 
@@ -82,11 +82,11 @@ If you open hello_service.py in a text editor you will see the following:
 
 This contains the following sections:
 
-* import zoo: Tells Python to import the zoo modules for use in this script
-* def Hello(conf,inputs,outputs): defines the Hello function and its parameters
-* outputs: The Result/Value KVP containing the output 'Hello World' string built from...
-* inputs: The name/value KVP containing the input string
-* return: The integer value for SERVICE_SUCCEEDED
+* **import zoo**: Tells Python to import the zoo modules for use in this script;
+* **def Hello(conf,inputs,outputs)**: defines the Hello function and its parameters;
+* **outputs**: The Result/Value KVP containing the output 'Hello World' string built from;
+* **inputs**: The name/value KVP containing the input string;
+* **return**: The integer value for SERVICE_SUCCEEDED.
 
 Note that the service file must obey normal python tab and spacing rules, and that the output and input dictionary KVP must have the same case as their declarations in the .zcfg file.
 

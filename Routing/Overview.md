@@ -16,9 +16,9 @@ Vector line data such as roads must be converted into a network or topology befo
 
 There are a number of packages available to take vector data such as OpenStreetMap, load it into PostgreSQL, and create the necessary network. These include:
 
- * [osm2pgsql](https://github.com/openstreetmap/osm2pgsql). Note that this tool simply loads the data into postgreSQL, you will need to use the pgRouting pgr_createTopology function to create the network yourself.
- * [osm2pgrouting](https://github.com/pgRouting/osm2pgrouting)
- * [osm2po](http://osm2po.de/)
+ * [osm2pgsql](https://github.com/openstreetmap/osm2pgsql) Note that this tool simply loads the data into postgreSQL, you will need to use the pgRouting pgr_createTopology function to create the network yourself;
+ * [osm2pgrouting](https://github.com/pgRouting/osm2pgrouting);
+ * [osm2po](http://osm2po.de/).
 There are pros and cons to each approach, but for large volumes or data and ease of installation and use, it's hard to beat osm2po.
 
 [Ordnance Survey MasterMap ITN data](http://www.ordnancesurvey.co.uk/business-and-government/products/itn-layer.html) is a ready-made (non-free) network, supplied in gml format. This can be loaded into PostgreSQL using a tool such as [Loader](https://github.com/AstunTechnology/Loader) and then used directly.
