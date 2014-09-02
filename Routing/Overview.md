@@ -5,14 +5,17 @@ Routing is the process by which we construct paths from Point A to B, or calcula
 ### pgRouting
 
 pgRouting is an extension for PostgreSQL, that extends PostGIS to add the Routing functions. For PostGIS 2.0 onwards it can easily be added to any spatial database using the syntax:
+
         create extension pgrouting;
+
 For older versions it is slightly more complicated, but documentation can be found at [pgrouting.org](http://pgrouting.org/).
 
-Vector line data such as roads must be converted into a network or topology before it can be used for routing. This is the process by which the different *segments*, or sections of a road between junctions are converted into *edges*, and the junctions are converted into *nodes*. This terminology will be covered in more detail later.
+Vector line data such as roads must be converted into a network or topology before it can be used for routing. This is the process by which the different **segments**, or sections of a road between junctions are converted into **edges**, and the junctions are converted into **nodes**. This terminology will be covered in more detail later.
 
 ### Loading your data
 
 There are a number of packages available to take vector data such as OpenStreetMap, load it into PostgreSQL, and create the necessary network. These include:
+
  * [osm2pgsql](https://github.com/openstreetmap/osm2pgsql). Note that this tool simply loads the data into postgreSQL, you will need to use the pgRouting pgr_createTopology function to create the network yourself.
  * [osm2pgrouting](https://github.com/pgRouting/osm2pgrouting)
  * [osm2po](http://osm2po.de/)

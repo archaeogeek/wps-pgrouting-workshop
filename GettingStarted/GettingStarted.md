@@ -20,7 +20,8 @@ Then hit return. You should see that the flag in the top-right of the VM window 
 2. Copy the following commands one line at a time and paste them into your terminal using ctrl-v:
         wget http://www.archaeogeek.com/zoo.tar.bz2
         sudo tar -xvjpf zoo.tar.bz2 -C /
-        sudo chmod -R 777 /usr/lib/cgi-bin/*.*
+        sudo chmod -R 777 /usr/lib/cgi-bin/
+        sudo chmod -R 777 /var/www/
         psql -f /var/www/temp/ws2013.sql pgrouting
 If asked for the sudo password, it's user
 3. You also need to install an additional library (utility package) for ZOO to run. Again in your terminal type the following:
