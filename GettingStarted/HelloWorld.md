@@ -6,7 +6,7 @@ ZOO services comprise a metadata or configuration file (.ZCFG) and a service pro
 
 ## The .zcfg file
 
-In the file manager, navigate to the /usr/lib/cgi-bin directory and open the file 'Hello.zcfg' in a text editor. You'll see that it looks something like the following:
+In the file manager, navigate to the /usr/lib/cgi-bin directory and right-click the file 'Hello.zcfg' then open it in medit. You'll see that it looks something like the following:
 
     [Hello]
      Title = Return a hello message.
@@ -16,7 +16,7 @@ In the file manager, navigate to the /usr/lib/cgi-bin directory and open the fil
      statusSupported = true
      serviceProvider = hello_service
      serviceType = Python
-     <DataInputs/>
+     <DataInputs>
       [name]
        Title = Input string
        Abstract = The name to insert in the hello message.

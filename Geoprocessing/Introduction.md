@@ -6,7 +6,7 @@ The ZOO demo comes with a large number of services pre-built. We will look at th
 
 ## The .zcfg file
 
-Navigate to /usr/lib/cgi-bin and right click the file buffer.zcfg to open it in a text editor.
+Navigate to /usr/lib/cgi-bin and right click the file buffer.zcfg to open it in medit.
 
 The top section of this file is the metadata section, as it was with the Hello World service. In this section you will spot a new parameter:
 

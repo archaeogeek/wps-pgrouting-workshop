@@ -1,6 +1,6 @@
 # Customising Your Server
 
-The basic information about your new ZOO WPS Service is stored in the file main.cfg, which lives in the same file as the ZOO kernel or cgi file. In this case, it's in /usr/lib/cgi-bin. Navigate to this location by double-clicking on the "file system" icon on the desktop to open the file manager. Find "main.cfg" and double-click it to open in a text editor.
+The basic information about your new ZOO WPS Service is stored in the file main.cfg, which lives in the same file as the ZOO kernel or cgi file. In this case, it's in /usr/lib/cgi-bin. Navigate to this location by double-clicking on the "file system" icon on the desktop to open the file manager. Find "main.cfg" and right-click it then open in medit.
 
 The main.cfg file contains some configuration information and metadata about the server as a whole, not the services that run on it. Typically it will look something similar to this:
 
@@ -60,7 +60,8 @@ This section lists the contact information for the server. Feel free to edit the
 
 Once you have completed main.cfg to your satisfaction and you have made sure you have saved your changes, it's time to make our first request to the server!
 
-Move your mouse to the bottom of the window and find the web browser icon (second from the left). Click on this to open firefox.
+Launch Firefox by selecting "Web browser" from the "Applications" menu:
+![Open Browser](../images/open_browser.png)
 
 In the URL window type the following:
 
@@ -70,3 +71,5 @@ If you have typed this correctly and have no mistakes in your main.cfg file you 
 ![GetCapabilities](../images/getcapabilities.png)
 
 If you scroll down through this response you will see a number of processes available, which are pre-defined as part of the ZOO demo that you downloaded.
+
+Try editing the main.cfg file to include your own information, then save it and refresh firefox to see your changes.

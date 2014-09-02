@@ -1,17 +1,5 @@
 # Configuring OSGeo LiveDVD v7.9 to access the Internet via the University of Nottingham network
 
-## Setting Keyboard Layout
-
-Open a Terminal window ("Applications/Accessories/Terminal Emulator"):
-
-![Terminal](../images/terminal.png)
-
-Type:
-
-    sudo setxkbmap gb
-
-Then hit return. You should see that the flag in the top-right of the VM window has become a Union Jack.
-
 ## Configure Firefox Proxy
 
 Launch Firefox by selecting "Web browser" from the "Applications" menu:
