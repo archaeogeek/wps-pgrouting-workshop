@@ -14,8 +14,10 @@ The following terminology is often used within pgrouting documentation:
 ## Routing Functions
 
 These are well-documented at [docs.pgrouting.org](http://docs.pgrouting.org/2.0/en/doc/index.html). The basic function format is:
+
     select pgr_algorithm(SQL for edges, start, end, additional options)
-This returns records of type pgr\_costresult[] or pgr_geomresult[]. These are arrays (or graphs) of nodes and edges (running from source to target), with a cost or geometry accordingly. 
+
+This returns records of type **pgr\_costresult[]** or **pgr_geomresult[]**. These are arrays (or graphs) of nodes and edges (running from source to target), with a cost or geometry accordingly. 
 
 To use these in a map, they must be joined to the original edge and node data.
 

@@ -2,7 +2,9 @@
 
 The WPS plugin doesn't seem to like the input and output format of the do service, so we'll go straight to seeing how this might work in a web-based map.
 
-The ZOO Demo provides a really fully-featured example of this. Click on "Applications/Web Browser" to open firefox if it's not already open, and browse to http://localhost/zoo-ws2013:
+The ZOO Demo provides a really fully-featured example of this. Click on "Applications/Web Browser" to open firefox if it's not already open, and browse to:
+
+    http://localhost/zoo-ws2013
 
 ![Routing Demo](../images/routing_demo.png)
 
@@ -22,7 +24,12 @@ Select the red flag and click on the map to place it where you'd like to end you
 
 This web application not only computes the shortest path route, but gives turn-by-turn directions, and computes the elevation.
 
-In firebug, find the request that starts with "GET zoo_loader" and hover over it with your mouse to see the full request. Right-click the request and choose "Open in new tab". This is the "Execute" request to the WPS server, and when broken down it looks a lot like the ones we built earlier (with a few extra parameters):
+In firebug, find the request that starts with "GET zoo_loader" and hover over it with your mouse to see the full request. Right-click the request and choose "Open in new tab". 
+
+![ZOO Firebug](../images/firebug_zoorequest.png)
+
+
+This is the "Execute" request to the WPS server, and when broken down it looks a lot like the ones we built earlier (with a few extra parameters):
 
 ![Execute do process](../images/execute_do.png)
 

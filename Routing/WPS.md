@@ -34,7 +34,7 @@ This config file has the same three sections that we've seen previously:
 
 ### DataInputs
 
-Since the service requires exactly two inputs- the starting node (source) and end node (target), these are both described in the config as being of type complexData with minOccurs and maxOccurs both set to 2, since for each point, it requires an easting and a northing to be valid.
+Since the service requires exactly two inputs- the starting node (source) and end node (target), these are both described in the config as being of type complexData. Each point requires an easting and a northing to be valid, so minOccurs and maxOccurs are both set to 2. 
 
 ### DataOutputs
 

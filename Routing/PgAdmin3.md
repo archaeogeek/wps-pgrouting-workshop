@@ -14,16 +14,22 @@ This is pre-loaded with some routing data and a network, based on the OpenStreet
 
 Note that the sample data was loaded using osm2pgrouting, and some of the columns that we would normally expect to be filled in have been left blank, such as the cost. 
 
-The tables "nodes" and "ways" are the pgRouting tables. If you expand "nodes\columns" you'll see the following:
+The tables "nodes" and "ways" are the pgRouting tables. If you expand "nodes/columns" you'll see the following:
 
  * id: a numeric ID for this node
  * lon: the "Easting" coordinate for this node
  * lat: the "Northing" coordinate for this node
  * numofuse: the number of ways that connect to this node
 
-Right-click the "nodes" table name, and choose "View Data/View Top 100 Rows" to get a sample of what this looks like. You can ignore the warning about editing data without a primary key, as we're only going to be looking, so click "OK" to dismiss this warning.
+Right-click the "nodes" table name, and choose "View Data/View Top 100 Rows" to get a sample of what this looks like. 
 
-If you expand "ways\columns", you'll see the following:
+![Top 100 Rows](../images/top100_rows.png)
+
+You can ignore the warning about editing data without a primary key, as we're only going to be looking, so click "OK" to dismiss this.
+
+![Nodes Table](../images/nodes_table.png)
+
+If you expand "ways/columns", you'll see the following:
 
  * gid: a numeric id for this node
  * class_id: a link to the classes table, which contains information on the different classifications of road
@@ -46,9 +52,11 @@ If you expand "ways\columns", you'll see the following:
  
 Right-click the "ways" table name, and choose "View Data/View Top 100 Rows" to get a sample of what this looks like. Again, click "OK" to dismiss the warning about editing data without a primary key. In particular, notice how rows with identical osm_ids, in other words edges that originally form part of the same road, have source and target nodes that link together.
 
+![Ways Table](../images/ways_table.png)
+
 Having explored the structure of the data, we can now run a shortest path query directly in pgadmin3 using the SQL window. Close any open tables but leave PgAdmin3 open. Click on the SQL button in the toolbar:
 
- ![SQL](../images//sql_button.png)
+ ![SQL](../images/sql_button.png)
 
 This opens a SQL Editor window where we can write queries. Copy the following into the SQL editor window:
 
@@ -62,16 +70,19 @@ If we recall from the introduction to pgRouting functions, pgr_dijkstra requires
  * Since we have chosen to take the direction of travel into account, we have set "directed" = true and "has_rcost" = true.
 
 Click the green "execute query" button to run the query:
+
 ![Execute query](../images/execute_query.png)
 
 Depending on the source and targets nodes that you selected, this query should return a set of rows, describing each step on the journey. The final row will always have an edge id (id2) of -1.
 
 We can make this query easier to understand and work with, by remembering that pgr_costresult[] is an array of the form (seq, id1, id2, cost). Therefore we can use these attributes in our query:
+
     select seq as id, id1 as node, id2 as edge, cost from pgr_dijkstra('select gid as id, source, target, length/maxspeed_forward as cost, length/maxspeed_backwards as reverse_cost from ways', 1, 9, true, true);
 
 ### Displaying the results on a map
 
 Finally, to display this data on a map we would need to apply some geometries to the results. Each row returned in the query equates to an edge, therefore we can use the original "ways" geometry, matching the edge id from "ways" to the edge id returned in our query above:
+
     select seq as id, id1 as node, id2 as edge, cost, the_geom from pgr_dijkstra('select gid as id, source, target, length/maxspeed_forward as cost, length/maxspeed_backwards as reverse_cost from ways', 1, 9, true, true) as route join ways on ways.gid = route.id2;
 
 We're going to use this query in QGIS to help visualise the results.
