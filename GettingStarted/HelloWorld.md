@@ -26,7 +26,7 @@ In the file manager, navigate to the /usr/lib/cgi-bin directory and open the fil
            dataType = string
            <Default />
        </LiteralData>
-     </DataInputs/>
+     </DataInputs>
      <DataOutputs>
       [Result]
        Title = The resulting string

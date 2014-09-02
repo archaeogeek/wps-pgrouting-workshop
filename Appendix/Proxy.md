@@ -2,16 +2,15 @@
 
 ## Setting Keyboard Layout
 
-Right-click on the American flag in the top-right corner of the VM window and select “Properties”:
-![Keyboard Layout](../images/keyboard_layout.png)
+Open a Terminal window ("Applications/Accessories/Terminal Emulator"):
 
-The “Keyboard Layouts” control will appear. Select the most appropriate “Keyboard model” from the drop-down list. Then under “Keyboard layouts” click the “Add” button. This will show the “Add Layout” control. Choose “English (UK)” unless there’s a more specific option under this heading that’s more appropriate:
-![Add UK Keyboard](../images/add_uk.png)
+![Terminal](../images/terminal.png)
 
-Then click “OK” to return to the “Keyboard Layouts” control. Highlight the previous “us” layout and click “Delete” to remove it:
-![Delete US Keyboard](../images/del_us.png)
+Type:
 
-Finally click “Close”. You should see that the flag in the top-right of the VM window has become a Union Jack.
+    sudo setxkbmap gb
+
+Then hit return. You should see that the flag in the top-right of the VM window has become a Union Jack.
 
 ## Configure Firefox Proxy
 
