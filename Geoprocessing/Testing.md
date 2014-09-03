@@ -7,20 +7,25 @@ It's a bit more difficult to fully test our Buffer function in a browser, but we
 We will use the QGIS WPS Plugin to Execute this process, to save trying to pass the nodes of a polygon via a URL!
 
 Go to the Applications button in the top left of your screen and go to Education\QGIS (not QGIS browser or server):
+
 ![Opening QGIS](../images/open_qgis.png)
 
 This will load QGIS 2.0, which is a little out of date but the same process should hold for later versions. Chances are, the WPS plugin is not yet installed, so click on Plugins on the top menu, and then "Manage and Install Plugins":
+
 ![Load Plugins](../images/load_plugins.png)
 
 Select "Get more from the list on the left, then in the Search bar, type WPS. In the results window you should see "WPS Client". Select it, then click on "Install plugin":
+
 ![WPS plugin](../images/wps_plugin.png) 
 
 Hopefully you will receive a message that the plugin installed successfully, then click on "Close" in the bottom right to close the plugin manager.
 
 First, load some suitable data to construct a buffer with. The OSGeo Live DVD contains plenty of spatial data for us to use. Click on "Layer/Add Vector Layer" in the QGIS menu:
+
 ![Add Vector Data](../images/add_vector.png)
 
 For the source dataset, browse to /home/user/data/vector/world_merc and click on world_merc.shp. If you can't see this, make sure that the file type dropdown list at the bottom of the browser window shows "ESRI Shapefiles [OGR]":
+
 ![ESRI Shape Files](../images/esri_shp.png)
 
 Then click "Open", and "Open" in the "add vector layer" dialog box to load the shapefile in the main window.
@@ -44,6 +49,7 @@ In the URL box type the path to the zoo_loader.cgi:
 Click OK to make this dialogue box disappear, and then with your new connection visible in the Server Connections box, click "Connect" to connect to the server.
 
 If the URL was correct, you should now see a long list of processes or Identifiers, with their Title and Abstract. If the list of Identifiers is not in alphabetical order, click the column title to sort it to your liking:
+
 ![WPS Processes](../images/wps_processes.png)
 
 From the list, find the Buffer service, and either highlight it and click "OK", or double-click it. This will bring up a simple form with the Input Vales in it. Enter the following options:

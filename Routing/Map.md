@@ -82,6 +82,8 @@ The runRouting function is defined at line 597, and the first thing it does is t
 
 Finally, two further WPS processes are also called in this block: UnionOneGeom and computeRouteProfile. These are needed for the elevation profile which is also computed, and the turn-by-turn directions.
 
+### The End!
+
 If you are interested in building your own web application for WPS using openlayers then there are a number of useful tutorials. For one that is specific to ZOO, I would recommend the [Practical Introduction to ZOO](http://www.zoo-project.org/docs/workshop/2010/index.html) given at FOSS4G 2010 (Osaka).
 
 

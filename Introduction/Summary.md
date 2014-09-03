@@ -4,7 +4,7 @@ The three WPS packages are listed below.
 
 ## Geoserver
 
-![Geoserver Logo](../images/Geoserver.png)
+![Geoserver Logo](../images/geoserver.png)
 
 [Geoserver](http://Geoserver.org) is a fully featured Web Mapping Server, and WPS integration is available as an addition. It has the advantage of being easier to install and comes pre-configured with a number of WPS processes, but it is not possible to create your own processes.
 
