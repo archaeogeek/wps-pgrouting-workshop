@@ -2,7 +2,7 @@
 
 ## Understanding a routing network
 
-The following terminology is often used within pgrouting documentation:
+The following terminology is often used within pgRouting documentation:
 
  * **edge_table**: the table containing the network;
  * **id**: primary key column for the edge_table;
