@@ -2,7 +2,7 @@
 
 Before trying to work with our routing data in a GIS or web-based map, it's important to understand the structure of the data and what the results of a Shortest Path or Driving Distance calculation actually look like.
 
-On your OSGeo LiveDVD desktop, doouble-click on the Databases folder, and then double-click on the PgAdmin3 icon to open it. PgAdmin3 is a graphical user interface for PostgreSQL.
+On your OSGeo LiveDVD desktop, double-click on the Databases folder, and then double-click on the PgAdmin3 icon to open it. PgAdmin3 is a graphical user interface for PostgreSQL.
 
 Expand "Server Groups\Servers\local (localhost:5432)" and then find "pgrouting" in the list of databases. 
 
@@ -60,7 +60,7 @@ Having explored the structure of the data, we can now run a shortest path query 
 
 This opens a SQL Editor window where we can write queries. Copy the following into the SQL editor window:
 
-    select pgr_dijkstra('select gid as id, source, target, length/maxspeed_forward as cost, length/maxspeed_backwards as reverse_cost from ways', 1, 9, true, true);
+    select pgr_dijkstra('select gid as id, source, target, length/maxspeed_forward as cost, length/maxspeed_backward as reverse_cost from ways', 1, 9, true, true);
 
 If we recall from the introduction to pgRouting functions, pgr_dijkstra requires 5 parameters. 
 
@@ -77,12 +77,12 @@ Depending on the source and targets nodes that you selected, this query should r
 
 We can make this query easier to understand and work with, by remembering that pgr_costresult[] is an array of the form (seq, id1, id2, cost). Therefore we can use these attributes in our query:
 
-    select seq as id, id1 as node, id2 as edge, cost from pgr_dijkstra('select gid as id, source, target, length/maxspeed_forward as cost, length/maxspeed_backwards as reverse_cost from ways', 1, 9, true, true);
+    select seq as id, id1 as node, id2 as edge, cost from pgr_dijkstra('select gid as id, source, target, length/maxspeed_forward as cost, length/maxspeed_backward as reverse_cost from ways', 1, 9, true, true);
 
 ### Displaying the results on a map
 
 Finally, to display this data on a map we would need to apply some geometries to the results. Each row returned in the query equates to an edge, therefore we can use the original "ways" geometry, matching the edge id from "ways" to the edge id returned in our query above:
 
-    select seq as id, id1 as node, id2 as edge, cost, the_geom from pgr_dijkstra('select gid as id, source, target, length/maxspeed_forward as cost, length/maxspeed_backwards as reverse_cost from ways', 1, 9, true, true) as route join ways on ways.gid = route.id2;
+    select seq as id, id1 as node, id2 as edge, cost, the_geom from pgr_dijkstra('select gid as id, source, target, length/maxspeed_forward as cost, length/maxspeed_backward as reverse_cost from ways', 1, 9, true, true) as route join ways on ways.gid = route.id2;
 
 We're going to use this query in QGIS to help visualise the results.
