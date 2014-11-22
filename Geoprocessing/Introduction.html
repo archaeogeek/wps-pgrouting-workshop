@@ -1,0 +1,535 @@
+<!DOCTYPE HTML>
+<html lang="en-US" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>Basic Geoprocessing | WPS PgRouting Workshop OSGIS 2014</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 1.3.1">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    <link rel="next" href="../Geoprocessing/Testing.html" />
+    
+    
+    <link rel="prev" href="../GettingStarted/HelloWorld.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+<link rel="stylesheet" href="../gitbook/style.css">
+
+
+        
+    <div class="book" data-level="3" data-basepath=".." data-revision="1416661240592">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+    	
+    	
+    	
+
+        
+
+        
+    
+        
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                         Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1" data-path="Introduction/Overview.html">
+            
+                
+                    <a href="../Introduction/Overview.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                         Overview
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="1.1" data-path="Introduction/Summary.html">
+            
+                
+                    <a href="../Introduction/Summary.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                         Package Summary
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.2" data-path="Introduction/installation.html">
+            
+                
+                    <a href="../Introduction/installation.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                         Installation
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2" data-path="GettingStarted/GettingStarted.html">
+            
+                
+                    <a href="../GettingStarted/GettingStarted.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                         Getting Started
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="2.1" data-path="GettingStarted/Customising.html">
+            
+                
+                    <a href="../GettingStarted/Customising.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                         Customising Your Server
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.2" data-path="GettingStarted/HelloWorld.html">
+            
+                
+                    <a href="../GettingStarted/HelloWorld.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                         Hello World
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter active" data-level="3" data-path="Geoprocessing/Introduction.html">
+            
+                
+                    <a href="../Geoprocessing/Introduction.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                         Basic Geoprocessing
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="3.1" data-path="Geoprocessing/Testing.html">
+            
+                
+                    <a href="../Geoprocessing/Testing.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                         Testing with QGIS
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4" data-path="Routing/Overview.html">
+            
+                
+                    <a href="../Routing/Overview.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                         Routing
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="4.1" data-path="Routing/Functions.html">
+            
+                
+                    <a href="../Routing/Functions.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                         Routing Functions
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.2" data-path="Routing/PgAdmin3.html">
+            
+                
+                    <a href="../Routing/PgAdmin3.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                         Testing in PgAdmin3
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.3" data-path="Routing/QGIS.html">
+            
+                
+                    <a href="../Routing/QGIS.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                         Testing in QGIS
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.4" data-path="Routing/WPS.html">
+            
+                
+                    <a href="../Routing/WPS.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                         Adding to our WPS
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.5" data-path="Routing/Map.html">
+            
+                
+                    <a href="../Routing/Map.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                         Using this on a web-based map
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5" data-path="Appendix/Acknowledgements.html">
+            
+                
+                    <a href="../Appendix/Acknowledgements.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                         Wrapping Up
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="6" data-path="Appendix/Proxy.html">
+            
+                
+                    <a href="../Appendix/Proxy.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                         University of Nottingham Proxy
+                    </a>
+                
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Published using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle share dropdown"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">Twitter</button>
+                <button type="button" data-sharing="google-plus" class="button">Google</button>
+                <button type="button" data-sharing="facebook" class="button">Facebook</button>
+                <button type="button" data-sharing="weibo" class="button">Weibo</button>
+                <button type="button" data-sharing="instapaper" class="button">Instapaper</button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >WPS PgRouting Workshop OSGIS 2014</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-gitbook_3">
+                    
+                        <h1 id="introduction-to-geoprocessing-with-wps">Introduction to Geoprocessing with WPS</h1>
+<p>Now that we understand how WPS services are created, we can progress to using them for useful tasks!</p>
+<p>The ZOO demo comes with a large number of services pre-built. We will look at the Buffer service.</p>
+<h2 id="the-zcfg-file">The .zcfg file</h2>
+<p>Navigate to /usr/lib/cgi-bin and right click the file buffer.zcfg to open it in medit.</p>
+<p>The top section of this file is the metadata section, as it was with the Hello World service. In this section you will spot a new parameter:</p>
+<ul>
+<li><strong>Profile</strong>: This is an optional unique identifier for the process, from the OGC URN namespace <a href="http://www.opengeospatial.org/ogcna" target="_blank">see here for an in depth description</a></li>
+</ul>
+<p>The DataInputs section has two parameters:</p>
+<ul>
+<li><strong>InputPolygon</strong>: The polygon you wish to buffer;</li>
+<li><strong>BufferDistance</strong>: The width of the buffer that you wish to create.</li>
+</ul>
+<p>The InputPolygon parameter has minOccurs =1 , so is mandatory. It has a ComplexData data type, with three supported types, namely 2 types of GML and JSON. UTF-8 encoded GML is the default type.</p>
+<p>The BufferDistance parameter has minOccurs = 0, so is optional. In the case where the BufferDistance parameter is not provided, there is a default 10 metres (note the US spelling). It has  LiteralData data type, with a type float, which means that it will accept numbers with decimal places. Although the default Unit of Measurement (uom) is meters, it will also accept feet.</p>
+<p>The DataOutputs section uses the same ComplexData definitions to describe the format of the output buffer polygon.</p>
+<p>You&#39;ll also notice a different type of supported output data:</p>
+<pre><code>&lt;Supported&gt;
+ mimeType = image/png
+ asReference = true
+ msStyle = STYLE COLOR 125 0 105 OUTLINECOLOR 0 0 0 WIDTH 3 END
+ useMapServer = true
+&lt;/Supported&gt;
+</code></pre><ul>
+<li><strong>mimeType = image/png</strong>: allow the saving of the output as an image;</li>
+<li><strong>asReference</strong>: (true/false) allow the output to be saved on the server;</li>
+<li><strong>msStyle</strong>: a style definition in MapServer format for the output polygon;</li>
+<li><strong>useMapServer</strong>: (true/false) instructs the ZOO kernel to make the output available in MapServer wms/wfs format for use in a web mapping application.</li>
+</ul>
+<h2 id="the-service-provider-file">The Service Provider file</h2>
+<p>The serviceProvider line in buffer.zcfg indicates that the python script is in the service.py file. Navigate to this in /usr/lib/cgi-bin and right-click to open it in a text editor.</p>
+<p>This python file contains a number of defined functions, and at top we can also see the modules that are used. Alongside the zoo module that we used in our Hello World service, the geoprocessing functions also use the ogr and gdal libraries, some system (sys) libraries, and libxml2, for parsing xml.</p>
+<p>NOTE: we&#39;re not going to try and write our own buffer function in this workshop, as Geoprocessing with Python is a course all of it&#39;s own! For reference material you could look at <a href="http://trac.osgeo.org/gdal/wiki/GdalOgrInPython" target="_blank">OSGeo&#39;s wiki page</a>, and in particular the <a href="http://www.gis.usu.edu/~chrisg/python" target="_blank">Utah State University tutorial</a>, and also <a href="http://www.packtpub.com/application-development/python-geospatial-development" target="_blank">Python Geosptial Development</a> (from Packt Publishing).</p>
+<p>This particular service provider file contains a number of helper functions defined at the top, and then the named functions lower down. This allows better code reuse, but can make it difficult to follow what goes on in an individual process.</p>
+<pre><code>def Buffer(conf,inputs,outputs):
+    print &gt;&gt; sys.stderr, &quot;Starting service...&quot;
+    bdist=float(inputs[&quot;BufferDistance&quot;][&quot;value&quot;])
+    print &gt;&gt; sys.stderr, bdist
+    print &gt;&gt; sys.stderr, inputs[&quot;InputPolygon&quot;]
+    geometry=extractInputs(conf,inputs[&quot;InputPolygon&quot;])
+    i=0
+    rgeometries=[]
+    while i &amp;lt; len(geometry):
+        tmp=geometry[i].Clone()
+        resg=geometry[i].GetGeometryRef().Buffer(bdist)
+        tmp.SetGeometryDirectly(resg)
+        rgeometries+=[tmp]
+        geomtry[i].Destroy()
+        resg.thisown=False
+        tmp.thisown=False
+        i+=1
+    outputResult(outputs[&quot;Result&quot;],rgeometries)
+    i=0
+    return zoo.SERVICE_SUCCEEDED
+</code></pre><p>This function has the same arguments as our Hello World script, namely the config from main.cfg, and the inputs and outputs dictionaries. The inputs dictionary contains two KVP- InputPolygon and BufferDistance, as defined in buffer.zcfg.</p>
+<p>The first 5 lines output some messages to the standard output and create variables to hold the values for InputPolygon and BufferDistance.</p>
+<p>Line 6 uses the first helper function- extractInputs. However, this is merely a gateway function to a number of other functions that do the real legwork to create a layer and associated features in memory from the input data.</p>
+<p>These associated features are returned to the Buffer function in line 6, then the following lines iterate through each feature, clone it, buffer it, and return it to a dictionary called rgeometries. When each feature has been buffered, rgeometries is appended to the outputResult dictionary and the script returns the SERVICE_SUCCEEDED value.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../GettingStarted/HelloWorld.html" class="navigation navigation-prev " aria-label="Previous page: Hello World"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../Geoprocessing/Testing.html" class="navigation navigation-next " aria-label="Next page: Testing with QGIS"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

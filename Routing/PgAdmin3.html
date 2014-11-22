@@ -1,0 +1,538 @@
+<!DOCTYPE HTML>
+<html lang="en-US" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>Testing in PgAdmin3 | WPS PgRouting Workshop OSGIS 2014</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 1.3.1">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    <link rel="next" href="../Routing/QGIS.html" />
+    
+    
+    <link rel="prev" href="../Routing/Functions.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+<link rel="stylesheet" href="../gitbook/style.css">
+
+
+        
+    <div class="book" data-level="4.2" data-basepath=".." data-revision="1416661240592">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+    	
+    	
+    	
+
+        
+
+        
+    
+        
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                         Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1" data-path="Introduction/Overview.html">
+            
+                
+                    <a href="../Introduction/Overview.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                         Overview
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="1.1" data-path="Introduction/Summary.html">
+            
+                
+                    <a href="../Introduction/Summary.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                         Package Summary
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.2" data-path="Introduction/installation.html">
+            
+                
+                    <a href="../Introduction/installation.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                         Installation
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2" data-path="GettingStarted/GettingStarted.html">
+            
+                
+                    <a href="../GettingStarted/GettingStarted.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                         Getting Started
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="2.1" data-path="GettingStarted/Customising.html">
+            
+                
+                    <a href="../GettingStarted/Customising.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                         Customising Your Server
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.2" data-path="GettingStarted/HelloWorld.html">
+            
+                
+                    <a href="../GettingStarted/HelloWorld.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                         Hello World
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3" data-path="Geoprocessing/Introduction.html">
+            
+                
+                    <a href="../Geoprocessing/Introduction.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                         Basic Geoprocessing
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="3.1" data-path="Geoprocessing/Testing.html">
+            
+                
+                    <a href="../Geoprocessing/Testing.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                         Testing with QGIS
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4" data-path="Routing/Overview.html">
+            
+                
+                    <a href="../Routing/Overview.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                         Routing
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="4.1" data-path="Routing/Functions.html">
+            
+                
+                    <a href="../Routing/Functions.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                         Routing Functions
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter active" data-level="4.2" data-path="Routing/PgAdmin3.html">
+            
+                
+                    <a href="../Routing/PgAdmin3.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                         Testing in PgAdmin3
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.3" data-path="Routing/QGIS.html">
+            
+                
+                    <a href="../Routing/QGIS.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                         Testing in QGIS
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.4" data-path="Routing/WPS.html">
+            
+                
+                    <a href="../Routing/WPS.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                         Adding to our WPS
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.5" data-path="Routing/Map.html">
+            
+                
+                    <a href="../Routing/Map.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                         Using this on a web-based map
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5" data-path="Appendix/Acknowledgements.html">
+            
+                
+                    <a href="../Appendix/Acknowledgements.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                         Wrapping Up
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="6" data-path="Appendix/Proxy.html">
+            
+                
+                    <a href="../Appendix/Proxy.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                         University of Nottingham Proxy
+                    </a>
+                
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Published using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle share dropdown"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">Twitter</button>
+                <button type="button" data-sharing="google-plus" class="button">Google</button>
+                <button type="button" data-sharing="facebook" class="button">Facebook</button>
+                <button type="button" data-sharing="weibo" class="button">Weibo</button>
+                <button type="button" data-sharing="instapaper" class="button">Instapaper</button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >WPS PgRouting Workshop OSGIS 2014</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-gitbook_15">
+                    
+                        <h1 id="exploring-our-routing-data-in-pgadmin3">Exploring our routing data in PgAdmin3</h1>
+<p>Before trying to work with our routing data in a GIS or web-based map, it&#39;s important to understand the structure of the data and what the results of a Shortest Path or Driving Distance calculation actually look like.</p>
+<p>On your OSGeo LiveDVD desktop, double-click on the Databases folder, and then double-click on the PgAdmin3 icon to open it. PgAdmin3 is a graphical user interface for PostgreSQL.</p>
+<p>Expand &quot;Server Groups\Servers\local (localhost:5432)&quot; and then find &quot;pgrouting&quot; in the list of databases. </p>
+<p><img src="../images/pgadmin3.png" alt="PgAdmin3"></p>
+<p>This is pre-loaded with some routing data and a network, based on the OpenStreetMap data for the Nottingham area. Expand &quot;Schemas\public\Tables&quot; to see the list of tables in the database (hint, there should be 1 schema, and 9 tables).</p>
+<p><img src="../images/pgadmin3_tables.png" alt="PgAdmin3 tables"></p>
+<p>Note that the sample data was loaded using osm2pgrouting, and some of the columns that we would normally expect to be filled in have been left blank, such as the cost. </p>
+<p>The tables &quot;nodes&quot; and &quot;ways&quot; are the pgRouting tables. If you expand &quot;nodes/columns&quot; you&#39;ll see the following:</p>
+<ul>
+<li><strong>id</strong>: a numeric ID for this node;</li>
+<li><strong>lon</strong>: the &quot;Easting&quot; coordinate for this node;</li>
+<li><strong>lat</strong>: the &quot;Northing&quot; coordinate for this node;</li>
+<li><strong>numofuse</strong>: the number of ways that connect to this node.</li>
+</ul>
+<p>Right-click the &quot;nodes&quot; table name, and choose &quot;View Data/View Top 100 Rows&quot; to get a sample of what this looks like. </p>
+<p><img src="../images/top100_rows.png" alt="Top 100 Rows"></p>
+<p>You can ignore the warning about editing data without a primary key, as we&#39;re only going to be looking, so click &quot;OK&quot; to dismiss this.</p>
+<p><img src="../images/nodes_table.png" alt="Nodes Table"></p>
+<p>If you expand &quot;ways/columns&quot;, you&#39;ll see the following:</p>
+<ul>
+<li><strong>gid</strong>: a numeric id for this node;</li>
+<li><strong>class_id</strong>: a link to the classes table, which contains information on the different classifications of road;</li>
+<li><strong>length</strong>: the length of this way or edge;</li>
+<li><strong>name</strong>: the name of this way or edge;</li>
+<li><strong>x1</strong>: the x coordinate of the start node for this way;</li>
+<li><strong>y1</strong>: the y coordinate of the start node for this way;</li>
+<li><strong>x2</strong>: the x coordinate for the end node for this way;</li>
+<li><strong>y2</strong>: the y coordinate for the end node for this way;</li>
+<li><strong>reverse_cost</strong>: the cost for travelling along this way in the reverse direction (left blank in the sample data);</li>
+<li><strong>rule</strong>: left blank in the sample data;</li>
+<li><strong>to_cost</strong>: the cost for travelling along this way in the forward direction (left blank in the sample data);</li>
+<li><strong>maxspeed_forward</strong>: the max speed travelling along this way in the forward direction;</li>
+<li><strong>maxspeed_backward</strong>: the max speed travelling along this way in the reverse direction;</li>
+<li><strong>osm_id</strong>: the original openstreetmap ID for this way</li>
+<li><strong>priority</strong>:  left blank in the sample data</li>
+<li><strong>the_geom</strong>: the geometry for this line in well-known binary format;</li>
+<li><strong>source</strong>: the id for the source node for this way;</li>
+<li><strong>target</strong>: the id for the target node for this way.</li>
+</ul>
+<p>Right-click the &quot;ways&quot; table name, and choose &quot;View Data/View Top 100 Rows&quot; to get a sample of what this looks like. Again, click &quot;OK&quot; to dismiss the warning about editing data without a primary key. In particular, notice how rows with identical osm_ids, in other words edges that originally form part of the same road, have source and target nodes that link together.</p>
+<p><img src="../images/ways_table.png" alt="Ways Table"></p>
+<p>Having explored the structure of the data, we can now run a shortest path query directly in pgadmin3 using the SQL window. Close any open tables but leave PgAdmin3 open. Click on the SQL button in the toolbar:</p>
+<p> <img src="../images/sql_button.png" alt="SQL"></p>
+<p>This opens a SQL Editor window where we can write queries. Copy the following into the SQL editor window:</p>
+<pre><code>select pgr_dijkstra(&#39;select gid as id, source, target, length/maxspeed_forward as cost, length/maxspeed_backward as reverse_cost from ways&#39;, 1, 9, true, true);
+</code></pre><p>If we recall from the introduction to pgRouting functions, pgr_dijkstra requires 5 parameters. </p>
+<ul>
+<li>The first is a SQL select statement that returns the id, source, target, cost and reverse_cost columns. In our ways table, the id column is called gid, so we must alias that using &#39;gid as id&#39;;</li>
+<li>Our cost columns are blank, so we can substitute in a length/maxspeed_forward calculation for the forward cost and length/maxspeed_backward as the reverse_cost;</li>
+<li>The query above arbitrarily chooses nodes 1 and 9 as the start and end nodes for the calculation, feel free to choose different ones;</li>
+<li>Since we have chosen to take the direction of travel into account, we have set &quot;directed&quot; = true and &quot;has_rcost&quot; = true;</li>
+</ul>
+<p>Click the green &quot;execute query&quot; button to run the query:</p>
+<p><img src="../images/execute_query.png" alt="Execute query"></p>
+<p>Depending on the source and targets nodes that you selected, this query should return a set of rows, describing each step on the journey. The final row will always have an edge id (id2) of -1.</p>
+<p>We can make this query easier to understand and work with, by remembering that pgr_costresult[] is an array of the form (seq, id1, id2, cost). Therefore we can use these attributes in our query:</p>
+<pre><code>select seq as id, id1 as node, id2 as edge, cost from pgr_dijkstra(&#39;select gid as id, source, target, length/maxspeed_forward as cost, length/maxspeed_backward as reverse_cost from ways&#39;, 1, 9, true, true);
+</code></pre><h3 id="displaying-the-results-on-a-map">Displaying the results on a map</h3>
+<p>Finally, to display this data on a map we would need to apply some geometries to the results. Each row returned in the query equates to an edge, therefore we can use the original &quot;ways&quot; geometry, matching the edge id from &quot;ways&quot; to the edge id returned in our query above:</p>
+<pre><code>select seq as id, id1 as node, id2 as edge, cost, the_geom from pgr_dijkstra(&#39;select gid as id, source, target, length/maxspeed_forward as cost, length/maxspeed_backward as reverse_cost from ways&#39;, 1, 9, true, true) as route join ways on ways.gid = route.id2;
+</code></pre><p>We&#39;re going to use this query in QGIS to help visualise the results.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../Routing/Functions.html" class="navigation navigation-prev " aria-label="Previous page: Routing Functions"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../Routing/QGIS.html" class="navigation navigation-next " aria-label="Next page: Testing in QGIS"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
