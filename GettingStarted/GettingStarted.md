@@ -18,7 +18,7 @@ Then hit return. You should see that the flag in the top-right of the VM window 
 
 1. Right-click on a blank bit of desktop and choose 'open terminal' if you don't have one open already.
 2. Copy the following commands one line at a time and paste them into your terminal using ctrl-v:
-        wget http://www.archaeogeek.com/downoads/zoo.tar.bz2
+        wget http://www.archaeogeek.com/downloads/zoo.tar.bz2
         sudo tar -xvjpf zoo.tar.bz2 -C /
         sudo chmod -R 777 /usr/lib/cgi-bin/
         sudo chmod -R 777 /var/www/
